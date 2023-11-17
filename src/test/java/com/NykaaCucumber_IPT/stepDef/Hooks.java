@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 
 public class Hooks {
 	
@@ -16,6 +17,7 @@ public class Hooks {
 		System.out.println("Before All");
 	}
 	
+	@BeforeStep
 	@Before("@RegressionTest")
 	public void before() {
 		System.out.println("Before");
